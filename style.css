@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+  background-color: #3a3f47;
+  font-family: Poppins;
+  padding: 0 80px 0 80px;
+  margin: 0;
+}
+
+/* ===== navbar ===== */
+nav {
+    background-color: #3a3f47;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+nav h1 {
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 18px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav li {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav a:hover {
+    color: #4fcca3;
+}
+
+/* ===== jumbotron ===== */
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 0px 0;
+    color: #eeeeee;
+}
+.jumbotron-title {
+    width: 100%;
+    font-size: 20px;
+}
+.jumbotron-title .upper-title {
+    font-weight: 200;
+    margin-bottom: 0;
+}
+.jumbotron-title .lower-title {
+    margin-top: 0;
+}
+.jumbotron-title p {
+    font-size: 15px;
+    font-weight: 200;
+}
+.jumbotron-title .divider-title {
+    padding: 2px;
+    width: 45%;
+    background-color: #4fcca3;
+}
+aside {
+    display: flex;
+    width: 80%;
+    position: relative;
+}
+aside img {
+    width: 300px;
+}
+aside .bio, .bio-sosmed {
+    margin: 0;
+}
+aside .bio li {
+    list-style-type: none;
+}
+aside .bg-circle {
+    padding: 250px;
+    background-color: #2f333a;
+    position: absolute;
+    border-radius: 100%;
+    top: -15%;
+    left: -20%;
+    z-index: -2;
+}
