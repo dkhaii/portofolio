@@ -1,156 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #353543;
   font-family: Poppins;
-  padding: 0 80px 0 80px;
+}
+
+.container {
+  padding: 0 150px;
 }
 
 /* ===== navbar ===== */
 nav {
-    background-color: #353543;
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
+  background-color: #353543;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
 }
 nav h1 {
-    color: #eeeeee;
-    font-weight: 500;
-    font-size: 20px;
+  color: #eeeeee;
+  font-weight: 500;
+  font-size: 20px;
 }
 nav ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 nav li {
-    list-style-type: none;
-    margin-right: 20px;
+  list-style-type: none;
+  margin-right: 20px;
 }
 nav a {
-    color: #eeeeee;
-    text-decoration: none;
-    font-size: 14px;
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 14px;
 }
 nav a:hover {
-    color: #4fcca3;
+  color: #00D26A;
 }
 
 /* ===== jumbotron ===== */
 .jumbotron {
-    display: flex;
-    justify-content: center;
-    padding: 80px 0 0 0;
-    color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  color: #eeeeee;
 }
 .jumbotron-title {
-    width: 100%;
-    position: relative;
-    padding-right: 10px;
+  width: 100%;
+  position: relative;
+  padding-right: 10px;
 }
 .jumbotron-title .upper-title {
-    font-weight: 200;
-    font-size: 35px;
-    margin-bottom: 0;
+  font-weight: 200;
+  font-size: 35px;
+  margin-bottom: 0;
 }
 .jumbotron-title .lower-title {
-    margin-top: 0;
-    font-size: 50px;
-    line-height: 1.2;
+  margin-top: 0;
+  font-size: 50px;
+  line-height: 1.2;
 }
 .jumbotron-title p {
-    font-size: 15px;
-    font-weight: 200;
+  font-size: 15px;
+  font-weight: 200;
 }
 .jumbotron-title .divider-title {
-    padding: 2px;
-    width: 45%;
-    background-color: #4fcca3;
-    margin: 30px 0 30px 0;
+  padding: 2px;
+  width: 45%;
+  background-color: #00D26A;
+  margin: 30px 0 30px 0;
 }
 aside {
-    display: flex;
-    width: 100%;
-    position: relative;
-    z-index: -1;
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: -1;
 }
 aside img {
-    width: 300px;
+  width: 300px;
 }
 aside .bio h1 {
-    font-size: 15px;
-    font-weight: 200;
-    padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: 200;
+  padding-bottom: 15px;
 }
 aside .bio p {
-    font-size: 18px;
-    font-weight: 200;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: left;
 }
 aside ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    padding-top: 30px;
-    gap: 10px;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding-top: 30px;
+  gap: 10px;
 }
 aside ul svg {
-    width: 20px;
-    fill: #4fcca3;
+  width: 20px;
+  fill: #00D26A;
 }
 aside ul li {
-    display: flex;
-    background-color: #48485B;
-    padding: 13px;
-    border-radius: 100%;
+  display: flex;
+  background-color: #48485b;
+  padding: 13px;
+  border-radius: 100%;
 }
 aside .bg-circle {
-    padding: 250px;
-    background-color: #2B2B36;
-    position: absolute;
-    border-radius: 100%;
-    top: -15%;
-    left: -18%;
-    z-index: -2;
+  padding: 250px;
+  background-color: #2b2b36;
+  position: absolute;
+  border-radius: 100%;
+  top: -15%;
+  left: -18%;
+  z-index: -2;
+}
+
+main {
+  position: relative;
 }
 
 /* ===== tech stack ===== */
+.tech-stack-konten {
+  display: flex;
+  justify-content: center;
+}
 .tech-stack {
-    padding: 35px 70px;
-    background-color: #3F3F50;
-    box-shadow: 4px -8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 2;
+  padding: 35px 70px;
+  background-color: #3f3f50;
+  box-shadow: 4px -8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: absolute;
+  top: -15%;
 }
 .tech-stack ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
 }
 .tech-stack .lower-stack {
-    padding-top: 30px;
+  padding-top: 20px;
 }
 .tech-stack li {
-    display: flex;
-    padding: 10px 20px;
-    background-color: #353543;
-    align-items: center;
+  display: flex;
+  padding: 15px 25px;
+  background-color: #353543;
+  align-items: center;
 }
 .tech-stack li img {
-    width: 50px;
+  width: 45px;
 }
 .tech-stack li h1 {
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: 10px;
-    color: #eeeeee;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #eeeeee;
 }
 
 /*===== portofolio section ===== */
+.portofolio {
+  padding: 100px 0;
+  color: #eeeeee;
+  background-color: #282833;
+}
+.portofolio h1 {
+  font-weight: 600;
+}
+.portofolio p {
+  font-weight: 200;
+}
+.portofolio .porto-konten {
+    display: flex;
+    padding-top: 80px;
+    justify-content: center;
+    gap: 2%;
+}
+.card {
+  padding: 20px;
+  background-color: #353543;
+  align-items: baseline;
+}
+.card .card-konten p {
+    color: #00D26A;
+    font-size: 12px;
+}
+.card .card-konten h1 {
+    color: #eeeeee;
+    font-size: 20px;
+    font-weight: 500;
+}
+.card .card-konten a {
+    display: flex;
+    justify-content: end;
+    color: #00D26A;
+    font-size: 12px;
+    font-weight: 200;
+    text-decoration: none;
+}
+.card .card-konten {
+    padding-bottom: 20px;
+}
+.card .card-thumbnail {
+    width: 320px;
+    height: 180px;
+}
+.card .thumbnail1 {
+    background: url(assets/img/porto1.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+}
+.card .thumbnail2 {
+    background: url(assets/img/porto5.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+}
+.card .thumbnail3 {
+    background: url(assets/img/porto6.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+}
