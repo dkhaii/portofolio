@@ -6,14 +6,14 @@
 }
 
 body {
-  background-color: #3a3f47;
+  background-color: #353543;
   font-family: Poppins;
   padding: 0 80px 0 80px;
 }
 
 /* ===== navbar ===== */
 nav {
-    background-color: #3a3f47;
+    background-color: #353543;
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -21,8 +21,8 @@ nav {
 }
 nav h1 {
     color: #eeeeee;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
 }
 nav ul {
     display: flex;
@@ -78,6 +78,7 @@ aside {
     display: flex;
     width: 100%;
     position: relative;
+    z-index: -1;
 }
 aside img {
     width: 300px;
@@ -105,16 +106,51 @@ aside ul svg {
 }
 aside ul li {
     display: flex;
-    background-color: #1a1a1a;
+    background-color: #48485B;
     padding: 13px;
     border-radius: 100%;
 }
 aside .bg-circle {
     padding: 250px;
-    background-color: #2f333a;
+    background-color: #2B2B36;
     position: absolute;
     border-radius: 100%;
     top: -15%;
     left: -18%;
     z-index: -2;
 }
+
+/* ===== tech stack ===== */
+.tech-stack {
+    padding: 35px 70px;
+    background-color: #3F3F50;
+    box-shadow: 4px -8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.tech-stack ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 40px;
+}
+.tech-stack .lower-stack {
+    padding-top: 30px;
+}
+.tech-stack li {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #353543;
+    align-items: center;
+}
+.tech-stack li img {
+    width: 50px;
+}
+.tech-stack li h1 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+    color: #eeeeee;
+}
+
+/*===== portofolio section ===== */
