@@ -25,7 +25,7 @@ nav {
 nav h1 {
   color: #eeeeee;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
 }
 nav ul {
   display: flex;
@@ -42,7 +42,7 @@ nav a {
   font-size: 14px;
 }
 nav a:hover {
-  color: #00D26A;
+  color: #00d26a;
 }
 
 /* ===== jumbotron ===== */
@@ -74,7 +74,7 @@ nav a:hover {
 .jumbotron-title .divider-title {
   padding: 2px;
   width: 45%;
-  background-color: #00D26A;
+  background-color: #00d26a;
   margin: 30px 0 30px 0;
 }
 aside {
@@ -105,7 +105,7 @@ aside ul {
 }
 aside ul svg {
   width: 20px;
-  fill: #00D26A;
+  fill: #00d26a;
 }
 aside ul li {
   display: flex;
@@ -138,7 +138,7 @@ main {
   box-shadow: 4px -8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 2;
   position: absolute;
-  top: -15%;
+  top: -7%;
 }
 .tech-stack ul {
   display: flex;
@@ -166,23 +166,29 @@ main {
   color: #eeeeee;
 }
 
+/* general rules */
+.section-title {
+  font-weight: 600;
+}
+.section-desc {
+  font-weight: 200;
+}
+.dot {
+  color: #00d26a;
+  font-size: 60px;
+}
+
 /*===== portofolio section ===== */
 .portofolio {
   padding: 100px 0;
   color: #eeeeee;
   background-color: #282833;
 }
-.portofolio h1 {
-  font-weight: 600;
-}
-.portofolio p {
-  font-weight: 200;
-}
 .portofolio .porto-konten {
-    display: flex;
-    padding-top: 80px;
-    justify-content: center;
-    gap: 2%;
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  gap: 2%;
 }
 .card {
   padding: 20px;
@@ -190,38 +196,107 @@ main {
   align-items: baseline;
 }
 .card .card-konten p {
-    color: #00D26A;
-    font-size: 12px;
+  color: #00d26a;
+  font-size: 12px;
 }
 .card .card-konten h1 {
-    color: #eeeeee;
-    font-size: 20px;
-    font-weight: 500;
+  color: #eeeeee;
+  font-size: 20px;
+  font-weight: 500;
 }
 .card .card-konten a {
-    display: flex;
-    justify-content: end;
-    color: #00D26A;
-    font-size: 12px;
-    font-weight: 200;
-    text-decoration: none;
+  display: flex;
+  justify-content: end;
+  color: #00d26a;
+  font-size: 12px;
+  font-weight: 200;
+  text-decoration: none;
 }
 .card .card-konten {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .card .card-thumbnail {
-    width: 320px;
-    height: 180px;
+  width: 320px;
+  height: 180px;
 }
 .card .thumbnail1 {
-    background: url(assets/img/porto1.1.png) scroll no-repeat center;
-    background-size: 100% auto;
+  background: url(assets/img/porto1.1.png) scroll no-repeat center;
+  background-size: 100% auto;
 }
 .card .thumbnail2 {
-    background: url(assets/img/porto5.1.png) scroll no-repeat center;
-    background-size: 100% auto;
+  background: url(assets/img/porto5.1.png) scroll no-repeat center;
+  background-size: 100% auto;
 }
 .card .thumbnail3 {
-    background: url(assets/img/porto6.1.png) scroll no-repeat center;
-    background-size: 100% auto;
+  background: url(assets/img/porto6.1.png) scroll no-repeat center;
+  background-size: 100% auto;
+}
+
+/* ===== contact section ===== */
+.contact {
+  color: #eeeeee;
+  padding: 100px 0;
+}
+.contact ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 80px;
+}
+.contact li {
+  background-color: #2b2b36;
+  padding: 15px 25px;
+}
+.contact ul a {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+.contact ul svg {
+  width: 35px;
+  fill: #00d26a;
+}
+.contact-name h1,
+.contact-name p {
+  color: #eeeeee;
+}
+.contact-name h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.contact-name p {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+/* ===== footer section ===== */
+footer {
+  padding: 15px 10px 10px 10px;
+  background-color: #00d26a;
+  color: #2b2b36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+footer ul svg {
+  width: 12px;
+  fill: #00d26a;
+}
+footer li a {
+  display: flex;
+  background-color: #48485b;
+  padding: 10px;
+  border-radius: 100%;
+}
+footer h1 {
+    font-size: 20px;
+    font-weight: 200;
 }
