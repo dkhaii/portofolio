@@ -5,22 +5,37 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #353543;
   font-family: Poppins;
 }
 
 .container {
-  padding: 0 150px;
+  padding: 0 350px;
+}
+
+header {
+  z-index: 1;
 }
 
 /* ===== navbar ===== */
 nav {
   background-color: #353543;
-  position: sticky;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 25px 0;
+  z-index: 1;
+  width: 100%;
+}
+nav .navbar-konten {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 nav h1 {
   color: #eeeeee;
@@ -43,13 +58,27 @@ nav a {
 }
 nav a:hover {
   color: #00d26a;
+  transition: all 0.3s ease-in-out;
+}
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+nav .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #eeeeee;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ===== jumbotron ===== */
 .jumbotron {
   display: flex;
   justify-content: center;
-  padding: 80px 0;
+  padding: 200px 0 80px 0;
   color: #eeeeee;
 }
 .jumbotron-title {
@@ -67,6 +96,34 @@ nav a:hover {
   font-size: 50px;
   line-height: 1.2;
 }
+.jumbotron-title h1 span.cursor {
+  background-color: #00d26a;
+  padding: 0 3px;
+  margin-left: 0.1em;
+  animation: blink 1s infinite;
+}
+.jumbotron-title h1 span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #00d26a;
+  }
+  49% {
+    background-color: #00d26a;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #00d26a;
+  }
+}
+
 .jumbotron-title p {
   font-size: 15px;
   font-weight: 200;
@@ -81,7 +138,6 @@ aside {
   display: flex;
   width: 100%;
   position: relative;
-  z-index: -1;
 }
 aside img {
   width: 300px;
@@ -113,6 +169,10 @@ aside ul li {
   padding: 13px;
   border-radius: 100%;
 }
+aside ul li:hover {
+  background-color: #282833;
+  transition: all 0.3s ease-in-out;
+}
 aside .bg-circle {
   padding: 250px;
   background-color: #2b2b36;
@@ -128,7 +188,7 @@ main {
 }
 
 /* ===== tech stack ===== */
-.tech-stack-konten {
+.tech-container {
   display: flex;
   justify-content: center;
 }
@@ -136,7 +196,6 @@ main {
   padding: 35px 70px;
   background-color: #3f3f50;
   box-shadow: 4px -8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 2;
   position: absolute;
   top: -7%;
 }
@@ -146,9 +205,6 @@ main {
   justify-content: center;
   list-style-type: none;
   gap: 20px;
-}
-.tech-stack .lower-stack {
-  padding-top: 20px;
 }
 .tech-stack li {
   display: flex;
@@ -188,12 +244,12 @@ main {
   display: flex;
   padding-top: 80px;
   justify-content: center;
-  gap: 2%;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .card {
   padding: 20px;
   background-color: #353543;
-  align-items: baseline;
 }
 .card .card-konten p {
   color: #00d26a;
@@ -211,9 +267,14 @@ main {
   font-size: 12px;
   font-weight: 200;
   text-decoration: none;
+  cursor: pointer;
 }
 .card .card-konten {
   padding-bottom: 20px;
+}
+.card-thumbnail-container {
+  display: flex;
+  justify-content: center;
 }
 .card .card-thumbnail {
   width: 320px;
@@ -231,6 +292,62 @@ main {
   background: url(assets/img/porto6.1.png) scroll no-repeat center;
   background-size: 100% auto;
 }
+.porto-konten .modal {
+  background-color: #353543;
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 80px 0;
+}
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.modal-bg.active {
+  display: block;
+}
+.modal {
+  margin: 15% auto;
+  width: 80%;
+}
+.modal .modal-konten .modal-img {
+  width: 480px;
+  height: 270px;
+  background-color: #eeeeee;
+  margin-top: 20px;
+}
+.modal .close-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 30px 0;
+}
+.modal .close-button {
+  padding-right: 30px;
+  cursor: pointer;
+}
+.modal .close-button .close-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #00d26a;
+}
+.modal .close-button .close-bar:nth-child(1) {
+  transform: translateY(0px) rotate(45deg);
+}
+.modal .close-button .close-bar:nth-child(2) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 /* ===== contact section ===== */
 .contact {
@@ -247,6 +364,8 @@ main {
 .contact li {
   background-color: #2b2b36;
   padding: 15px 25px;
+  display: flex;
+  align-items: center;
 }
 .contact ul a {
   display: flex;
@@ -296,7 +415,253 @@ footer li a {
   padding: 10px;
   border-radius: 100%;
 }
+footer li a:hover {
+  background-color: #282833;
+  transition: all 0.3s ease-in-out;
+}
 footer h1 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1700px) {
+  .container {
+    padding: 0 150px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  /* ===== bagian jumbotron ===== */
+  .jumbotron-title .upper-title {
+    font-size: 30px;
+  }
+  .jumbotron-title .lower-title {
+    font-size: 40px;
+  }
+  .jumbotron-title p {
+    font-size: 12px;
+  }
+  aside img {
+    width: 260px;
+  }
+  aside .bio p {
+    font-size: 15px;
+  }
+
+  /* ===== bagian tech stack ===== */
+  .tech-stack {
+    padding: 25px 55px;
+    top: -6%;
+  }
+  .tech-stack li img {
+    width: 35px;
+  }
+  .tech-stack li h1 {
+    font-size: 15px;
+  }
+
+  /* ===== bagian portofolio ===== */
+  .card .card-thumbnail {
+    width: 288px;
+    height: 162px;
+  }
+  .card .thumbnail1 {
+    background: url(assets/img/porto1.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+  }
+  .card .thumbnail2 {
+    background: url(assets/img/porto5.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+  }
+  .card .thumbnail3 {
+    background: url(assets/img/porto6.1.png) scroll no-repeat center;
+    background-size: 100% auto;
+  }
+
+  /* ===== bagian contact ===== */
+  .contact ul {
+    display: flex;
+    gap: 10px;
+  }
+  .contact ul svg {
+    width: 30px;
+    fill: #00d26a;
+  }
+  .contact-name h1,
+  .contact-name p {
+    color: #eeeeee;
+  }
+  .contact-name h1 {
     font-size: 20px;
+    font-weight: 500;
+  }
+  .contact-name p {
+    font-size: 12px;
     font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    padding: 0px 100px;
+  }
+
+  /* ===== bagian jumbotron ===== */
+  .jumbotron {
+    padding: 200px 0 0px 0;
+  }
+  .jumbotron-title .divider-title {
+    margin: 15px 0;
+  }
+  aside .bio h1 {
+    font-size: 12px;
+  }
+  aside .bio p {
+    font-size: 13px;
+  }
+  aside ul svg {
+    width: 15px;
+  }
+  aside ul li {
+    padding: 12px;
+  }
+
+  /* ===== bagian tech-stack ===== */
+  .tech-container {
+    background-color: #282833;
+  }
+  .tech-stack {
+    padding: 55px 55px 0 55px;
+    top: 0;
+    background-color: #282833;
+    box-shadow: none;
+    position: relative;
+  }
+  .tech-stack li img {
+    width: 35px;
+  }
+  .tech-stack li h1 {
+    font-size: 15px;
+  }
+  .tech-stack ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* ===== bagian portofolio ===== */
+  .card .card-konten {
+    padding-bottom: 20px;
+  }
+  .card .card-thumbnail {
+    width: 480px;
+    height: 270px;
+  }
+
+  /* ===== bagian contact ===== */
+  .contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact ul svg {
+    width: 30px;
+    fill: #00d26a;
+  }
+  .contact-name h1,
+  .contact-name p {
+    color: #eeeeee;
+  }
+  .contact-name h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .contact-name p {
+    font-size: 12px;
+    font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px 50px;
+  }
+
+  /* ===== responsive navbar ===== */
+  nav .navbar-konten h1 {
+    font-size: 18px;
+  }
+  nav .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #00d26a;
+    width: 100%;
+    justify-content: center;
+    transition: 0.3s;
+    gap: 0;
+    z-index: 5;
+  }
+  nav .nav-menu li {
+    margin: 10px 0;
+  }
+  nav .nav-menu li a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #48485b;
+  }
+  nav .nav-menu.active {
+    left: 0;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  nav.shadow {
+    background-color: #00d26a;
+  }
+
+  .jumbotron {
+    padding: 150px 0px 0px 0;
+    display: block;
+  }
+  aside .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  aside .bg-circle {
+    padding: 200px;
+    top: 5%;
+  }
+  aside img {
+    width: 230px;
+  }
+
+  .porto-konten .card-thumbnail {
+    width: 368px;
+    height: 207px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .porto-konten .card-thumbnail {
+    width: 320px;
+    height: 180px;
+  }
 }
